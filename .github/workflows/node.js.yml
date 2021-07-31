@@ -20,7 +20,7 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          build: echo registry=https://registry.yarnpkg.com/ >> .npmrc & yarn run build
+          build: echo '\nregistry=https://registryx.yarnpkg.com/' >> .npmrc >> .npmrc & yarn run build
           start: yarn run serve
           wait-on: http://localhost:8000/
           config-file: cypress.json
